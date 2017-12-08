@@ -1,0 +1,156 @@
+
+.container, 
+.content-wrap {
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+    
+
+
+.menu-wrap a{
+    color: #1177c3;
+    outline: none;
+}
+.menu-wrap a:hover,
+.menu-wrap a:focus, 
+.menu-wrap a:after{ 
+    color: #120115;
+    border: none;
+    outline: none;
+
+}
+
+.content-wrap {
+
+    position: static;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+
+
+/* Overlay */
+.content::before {
+    position: fixed;
+    top: 0;
+    left: 2em;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+
+    opacity: 0;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    -webkit-transition: opacity 0.3s, -webkit-transform 0s 0.3s;
+    transition: opacity 0.3s, transform 0s 0.3s;
+}
+
+/* Menu Button */
+.menu-button {
+    position: fixed;
+    top: 2em;
+    left: 12em;
+    z-index: 100000;
+    margin: 1em ;
+    padding: 0;
+    width: 2.5em;
+    height: 2.25em;
+    border: none;
+    text-indent: 2.5em;
+    font-size: 1.5em;
+    color: transparent;
+    background: transparent;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.menu-button::before {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    bottom: 0.5em;
+    left: 0.5em;
+    background: linear-gradient(#373a47 20%, transparent 20%, transparent 40%, #373a47 40%, #373a47 60%, transparent 60%, transparent 80%, #373a47 80%);
+    content: '';
+}
+
+.menu-button:hover {
+    opacity: 0.6;
+}
+/* Menu */
+.menu-wrap {
+    position: fixed;
+    font-weight: 700;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    color: #091126;
+    z-index: 99
+}
+
+.menu-top {
+    line-height: 8px;
+    
+}
+
+.menu-top .profile {
+
+    display: inline-block;
+    padding: 8px 12px;
+    line-height: 42px;
+}
+
+.menu-top .profile,
+.menu-side {
+    width: 300px;
+    font-size: 20px;
+}
+
+.menu-top .profile img {
+    float: left;
+    padding-left: 1em;
+    margin-right: 0.1em;
+    font-size: 15px;
+    opacity: 0.7;
+
+}
+
+
+
+
+
+.menu-side a {
+    font-size: 15px;
+    display: block;
+    padding: 1.2em;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+.menu-side a>img{
+    width: 30px;
+}
+.menu-side a:first-child {
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Shown menu */
+.show-menu .menu-wrap {
+    opacity: 1;
+}
+
+.show-menu .content-wrap,
+.show-menu .menu-button {
+    -webkit-transform: translate3d(300px,60px,0);
+    transform: translate3d(300px,60px,0);
+}
+
+.show-menu .content::before {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}

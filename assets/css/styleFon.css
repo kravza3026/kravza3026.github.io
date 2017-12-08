@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700);
+/* _functions.scss */
+/*
+## Triangle
+* @include triangle within a pseudo element and add positioning properties (ie. top, left)
+* $direction: up, down, left, right
+*/
+/*
+* Currency
+*/
+/*
+* Clearfix
+*/
+/* line 103, ../_scss/_functions.scss */
+.clearfix {
+  *zoom: 2;
+}
+/* line 105, ../_scss/_functions.scss */
+.clearfix:after {
+  content: '';
+  display: table;
+  line-height: 0;
+  clear: both;
+}
+
+
+
+
+/* default.scss */
+/* line 2, ../_scss/_default.scss */
+HTML {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 7, ../_scss/_default.scss */
+
+@media (min-width: 1940px) {
+  /* line 7, ../_scss/_default.scss */
+  BODY {
+    font-size: 125%;
+  }
+}
+@media (min-width: 1680px) and (max-width: 1940px) {
+  /* line 7, ../_scss/_default.scss */
+  BODY {
+    font-size: 105%;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1680px) {
+  /* line 7, ../_scss/_default.scss */
+  BODY {
+    font-size: 95%;
+  }
+}
+@media (max-width: 1280px) {
+  /* line 7, ../_scss/_default.scss */
+  BODY {
+    font-size: 85%;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  /* line 7, ../_scss/_default.scss */
+  BODY {
+    font-size: 75%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 7, ../_scss/_default.scss */
+  BODY {
+    font-size: 65%;
+  }
+}
+
+
+
+/* line 114, ../_scss/_default.scss */
+select, option {
+
+  font-size: 35px;
+  line-height: 15px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
